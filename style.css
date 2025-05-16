@@ -3,16 +3,20 @@
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
     gap: 5px;
 }
-
 .cell {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
-    background: white;
+    width: 50px; /* Width of each cell */
+    height: 50px; /* Height of each cell */
+    background-color: white; /* Background color for the cell */
+    border: 1px solid #ccc; /* Border for each cell */
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+    display: flex; /* Use Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-size: 32px; /* Increase size of the emoji */
 }
 
 .cell.active {
-    background: black;
+    background: rgb(253, 225, 102);
 }
 
 .cell.active.highlight {
@@ -20,6 +24,28 @@
 }
 
 .cell.highlight {
-    background-color: #b4ffb6;
-    border-color: #02ff0a; /* Highlighted column color */
+    background-color: #71e8fa;
+    border-color: #2fcb8f; /* Highlighted column color */
+}
+
+.fish-animation {
+    animation: shift-back-forth 0.5s ease-in-out forwards; /* Play the animation over 0.5 seconds */
+}
+
+@keyframes shift-back-forth {
+    0% {
+        transform: translateX(0); /* Original position */
+    }
+    25% {
+        transform: translateX(-5px); /* Shift left */
+    }
+    50% {
+        transform: translateX(5px); /* Shift right */
+    }
+    75% {
+        transform: translateX(-5px); /* Shift left again */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
+    }
 }

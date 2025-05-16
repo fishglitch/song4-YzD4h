@@ -1,30 +1,21 @@
 <!doctype html>
 <html>
-  <head>
-
+<head>
     <meta charset="utf-8" />
-
-    <title>Hello Tone</title>
-
-    <!-- The website stylesheet -->
+    <title>Song for YzD4h</title>
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Tone.js Library -->
     <script src="https://unpkg.com/tone"></script>
-
-    <!-- The website JavaScript file -->
     <script src="script.js" defer></script>
+</head>
+<body>
+    <div slot="explanation">
+        The grid squares correspond to musical notes. Click on them to select and 
+        play notes instantly. Press the "Start/Stop Sequence" button to play or stop
+        selected notes in sequence.
+    </div>
+    <button id="start-button" onclick="toggleSequence()">Start Sounds</button>
+    <button id="clear-button" onclick="clearSequence()">Clear Sounds</button>
 
-  </head>
-	<body>
-			<div slot="explanation">
-        <a href="https://tonejs.github.io/docs/latest/functions/getTransport.html">Tone.Transport</a>
-				is the application-wide timekeeper. This example uses <a href="https://tonejs.github.io/docs/15.1.22/classes/Sequence.html">Tone.Sequence</a> to invoke a callback
-				every nth note.
-			</div>
-
-            <button id="start-button" onclick="startTone()">Start Tone.js</button>
-			<div id="content">
-      </div>
-	</body>
+  <div id="content"></div>
+</body>
 </html>
